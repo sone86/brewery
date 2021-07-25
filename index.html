@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	 <meta name="theme-color" content="#bf431f"/>
+	<meta name="description" content="Brewery - Birra '33">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Brewery</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+
+<div class="page-wrap">
+	<div class="loader-container">
+		<div class="loader"></div>
+	</div>
+	<header class="header">
+		<div class="container">
+			<div class="logo-container">
+				<a href="#"><img src="images/logo.png" alt="Logo"></a>
+			</div>
+			<ul class="mega-menu">
+				<li class="menu-item">
+					<a href="#">Home</a>
+				</li>
+				<li class="menu-item">
+					<a href="#">Brewery</a>
+				</li>
+				<li class="menu-item">
+					<a href="#">Events</a>
+				</li>
+				<li class="menu-item">
+					<a href="#">Reservation</a>
+				</li>
+				<li class="menu-item">
+					<a href="#">Features</a>
+				</li>
+				<li class="menu-item">
+					<a href="#">Blog</a>
+				</li>
+				<li class="menu-item">
+					<a href="#">Contacts</a>
+				</li>
+			</ul>
+			<div class="menu-opener">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</header>
+
+	<div class="page-container">
+		<div class="container">
+
+			<div class="banner-container">
+				<div class="banner">
+					<div class="banner-text">
+						<h1>Good Beer Brings People Together</h1>
+						<h2>That's why every one of our beers is crafted with the simple purpose of helping people spend meaningful time with each other.</h2>
+						<div class="banner-link-container">
+							<a href="#" class="banner-link">Shop now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="sidebar">
+				<div class="sidebar-container">
+						<form class="search-form">
+							<p class="sidebar-title">Serach products:</p>
+							<input type="text" name="text" class="search-input" autocomplete="off" placeholder="Search products">
+							<p class="validation">Search must be filled out</p>
+							<button class="search-submit">Submit</button>
+						</form>
+				</div>
+				<div class="sidebar-container">
+					<p>Alcohol by Volume:</p>
+					<div class="range-slider">
+						<input type="text" class="js-range-slider" autocomplete="off" name="my_range" value="" />
+					</div>
+					<div class="range-slider-button">
+						<button class="range-filter">Filter</button>
+					</div>
+				</div>
+				<div class="sidebar-container">
+					<div class="brewed-before">
+						<p>Brewed before:</p>
+						<input type="text" id="brewed-before-input" placeholder="Select date" autocomplete="off" readonly> 
+					</div>
+				</div>
+				<div class="sidebar-container">
+					<div class="food-container">
+						<p class="sidebar-title">Food:</p>
+						<div class="radio-container">
+							<label class="radio-label">Chicken
+							  <input type="radio" name="radio" class="radio-button" value="chicken">
+							  <span class="checkmark"></span>
+							</label>
+							<label class="radio-label">Cake
+							  <input type="radio" name="radio" class="radio-button" value="cake">
+							  <span class="checkmark"></span>
+							</label>
+							<label class="radio-label">Cheese
+							  <input type="radio" name="radio" class="radio-button" value="cheese">
+							  <span class="checkmark"></span>
+							</label>
+							<label class="radio-label">Salad
+							  <input type="radio" name="radio" class="radio-button" value="salad">
+							  <span class="checkmark"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column-main">
+				<div class="toolbar-products">
+					<div class="sidebar-opener"><i class="fa fa-align-center" aria-hidden="true"></i></div>
+					<div class="sidebar-close"></div>
+					<div class="view-container">
+						<button class="grid-button product-mode active" aria-label="Grid Mode" data-mode="grid-mode"><i class="fa fa-th" aria-hidden="true"></i></button>
+						<button class="list-button product-mode" aria-label="List Mode" data-mode="list-mode"><i class="fa fa-list" aria-hidden="true"></i></button>
+					</div>
+					<div class="show-per-page">
+						<p>Show</p>
+						<select>
+							<option value="12" selected>12</option>
+							<option value="24">24</option>
+							<option value="48">48</option>
+						</select>
+						<p>per page</p>
+					</div>
+				</div>
+				<div class="selected-filters"></div>
+				<div class="products grid-mode">
+					<ul class="product-list"></ul>
+				</div>
+
+				<div class="pagination">
+					<button class="prev" disabled><span><i class="fa fa-chevron-left" aria-hidden="true"></i></span> Previous </button>
+					<button class="next">Next <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span></button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="footer-inner container">
+			<div class="footer-top">
+				<div class="footer-column">
+					<div class="footer-logo">
+						<a href="#">
+							<img src="images/logo2.png" alt="Logo">
+						</a>
+					</div>
+					<div class="logo-description">
+						<p>We are the first modern day brewery. Our success has been built through the development of quality beers.</p>	
+					</div>
+					<ul class="social-icons">
+						<li>
+							<a href="https://twitter.com/" aria-label="Twitter" target="_blank" rel="noopener"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						</li>
+						<li>
+							<a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+						</li>
+						<li>
+							<a href="https://www.google/" target="_blank" aria-label="Google" rel="noopener"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+						</li>
+						<li>
+							<a href="https://rss.com/" target="_blank" aria-label="Rss" rel="noopener"><i class="fa fa-rss" aria-hidden="true"></i></a>
+						</li>
+
+					</ul>
+				</div>
+				<div class="footer-column">
+					<p class="footer-title">Links</p>
+					<ul class="footer-menu">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Brewery</a></li>
+						<li><a href="#">Reservation</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Contacts</a></li>
+					</ul>
+				</div>
+				<div class="footer-column">
+					<p class="footer-title">Blog</p>
+					<ul class="blog">
+						<li>
+							<a href="#">Our spaces are welcoming and infinitely tailorable</a>
+						</li>
+						<li>
+							<a href="#">Whatever you might need to make your event sparkle</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-column">
+					<p class="footer-title">Contacts</p>
+					<ul class="contacts">
+						<li>
+							<p><span>Address:</span> 1229 SE Nehalem, <br> Portland, OR 97202</p>
+						</li>
+						<li>
+							<p><span>Phone:</span> <a href="tel:503 230 9260"> 503 230 9260</a></p>
+						</li>
+						<li>
+							<p><span>Email:</span> <a href="mailto:info@brewery.com"> info@brewery.com</a></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="copyright">
+					<a href="#">AncoraThemes</a> 
+					© 2021. All rights reserved. 
+					<a href="#">Terms of Use</a> and 
+					<a href="#">Privacy Policy</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="scroll-to-top">
+		<a href="#"  aria-label="Scroll">
+			<span><i class="fa fa-chevron-up" aria-hidden="true"></i></span>
+		</a>
+	</div>
+
+
+	<div id="product-modal" class="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<span class="close">&times;</span>
+				<p>Product Details</p>
+			</div>
+			<div class="modal-body"></div>
+		</div>
+
+	</div>
+
+
+</div>
+
+<script src="js/jqueru-3.6.0.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
